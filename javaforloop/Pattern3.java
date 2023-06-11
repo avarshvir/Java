@@ -1,13 +1,20 @@
 class Pattern3{
     public static void main(String args[]){
-        for(int vertical_row = 0; vertical_row <= 4; vertical_row++){
-            for(int horizontal_column = 4 ; horizontal_column >= vertical_row; horizontal_column--){
-                System.out.print("  ");
+        int row, column;
+        for(row = 1; row <= 4; row++){
+            
+            for(column = 1; column <= 4-row; column++){
+                System.out.print(" ");
+                
+            } 
+            for(int k = 1; k <= row; k++){
+        System.out.print("*");
             }
-            for(int horizontal_column = 0; horizontal_column <= vertical_row; horizontal_column++ ){
-                System.out.print("*");
-            }
-            System.out.println(" ");
+            System.out.println();
         }
+         
+       
+        }
+       
     }
-}
+
