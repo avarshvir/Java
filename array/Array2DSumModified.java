@@ -60,6 +60,7 @@ class Array2DSumModified{
                     System.out.print(sum[i][j] +" "); 
                 }
                 System.out.println();
+            
             }
         }
     }
