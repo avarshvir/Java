@@ -17,7 +17,7 @@ public class Employee {
         int Days_31 = 31;
         int Days_30 = 30;
         int feb_days = 28;
-        if (month % 2 != 0 && feb_days == 0) {
+        if (month % 2 != 0 && feb_days % 2 == 0) {
             
             return (Days_31*baseSalary) + bonus;
         } else {
