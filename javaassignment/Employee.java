@@ -1,10 +1,13 @@
 import java.util.Scanner;
+import java.lang.System;
 
 public class Employee {
     private String firstName;
     private String lastName;
     private int baseSalary;
     private int bonus;
+    
+    //Scanner scanner = new Scanner(System.in);
 
     Employee(String firstName, String lastName, int baseSalary, int bonus) {
         this.firstName = firstName;
@@ -14,11 +17,27 @@ public class Employee {
     }
 
     public int calculateSalary(int month) {
+        if(month > 12 || month <= 0){
+            System.out.println("Not valid");
+            System.exit(0);
+        }
+        else {
         int Days_31 = 31;
         int Days_30 = 30;
-        int feb_days = 29;
+        int leapYear;
         if (month == 2) {
-            return (feb_days*baseSalary) + bonus;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("Is it leap year : ");
+            System.out.println("\n 1-> press 1 for leap year \n 2-> press 2 if not leap year");
+            leapYear = sc.nextInt();
+            if(leapYear == 1){
+                return (29*baseSalary) + bonus;
+            }
+            else{
+                return (28*baseSalary) + bonus;
+            }
+
+//            return (feb_days*baseSalary) + bonus;
         }
         else if(month % 2 != 0){
             return (Days_31*baseSalary) + bonus;
@@ -26,6 +45,8 @@ public class Employee {
         else{
             return (Days_30*baseSalary) + bonus;
         }
+    }
+    return 1;
     }
 
     public static void main(String[] args) {
