@@ -16,12 +16,15 @@ public class Employee {
     public int calculateSalary(int month) {
         int Days_31 = 31;
         int Days_30 = 30;
-        int feb_days = 28;
-        if (month % 2 != 0 && feb_days % 2 == 0) {
-            
+        int feb_days = 29;
+        if (month == 2) {
+            return (feb_days*baseSalary) + bonus;
+        }
+        else if(month % 2 != 0){
             return (Days_31*baseSalary) + bonus;
-        } else {
-            return baseSalary;
+        } 
+        else{
+            return (Days_30*baseSalary) + bonus;
         }
     }
 
