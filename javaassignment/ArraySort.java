@@ -19,7 +19,8 @@ class ArraySort{
             System.out.print(arr[i] + " ");
         }
             System.out.println(" ");
-          System.out.println("Enter the order in which you want to sort the array (1 - ascending, 2 - descending): ");
+          System.out.println("Enter the order in which you want to sort the array ");
+          System.out.println("\n 1> Ascending Order \n 2> Descending Order");
         int sortOption = scanner.nextInt();
 
         // Sort the array
