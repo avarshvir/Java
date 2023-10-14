@@ -1,0 +1,267 @@
+Vehicle Rental System:
+Create an interface Rentable with methods for renting and returning a vehicle. Implement this interface in classes for different types of vehicles (e.g., Car, Bike). Implement a rental system that keeps track of rented vehicles.
+
+Message Processing:
+Create an interface MessageProcessor with a method to process a message. Implement this interface in classes that perform different message processing tasks (e.g., EmailProcessor, SMSProcessor).
+
+Sorting Employees:
+Create an interface Employee with methods to get the employee's name and salary. Implement this interface in classes representing different types of employees (e.g., Manager, Engineer). Create a program to sort employees based on salary.
+
+Simple Calculator:
+Create an interface Calculator with methods for basic mathematical operations (add, subtract, multiply, divide). Implement this interface in a class to create a simple calculator.
+
+Geometric Shapes Hierarchy:
+Create an interface GeometricShape with methods to calculate area and perimeter. Implement this interface in classes for different geometric shapes (e.g., Square, Circle, Triangle). Create a program to calculate and compare their areas.
+
+Remote Control:
+Create an interface RemoteControl with methods to turn on and off a device. Implement this interface in classes for different devices (e.g., TV, Stereo). Create a universal remote control system.
+
+Plugin System:
+Create an interface Plugin for a plugin system, with methods to initialize, execute, and close the plugin. Implement this interface in various plugins with different functionalities.
+ChatGPT
+
+2 / 2
+
+Certainly! Below are the implementations for the scenarios you described:
+
+Vehicle Rental System:
+java
+Copy code
+interface Rentable {
+    void rent();
+    void returnVehicle();
+}
+
+class Car implements Rentable {
+    @Override
+    public void rent() {
+        System.out.println("Car rented");
+    }
+
+    @Override
+    public void returnVehicle() {
+        System.out.println("Car returned");
+    }
+}
+
+class Bike implements Rentable {
+    @Override
+    public void rent() {
+        System.out.println("Bike rented");
+    }
+
+    @Override
+    public void returnVehicle() {
+        System.out.println("Bike returned");
+    }
+}
+Message Processing:
+java
+Copy code
+interface MessageProcessor {
+    void processMessage(String message);
+}
+
+class EmailProcessor implements MessageProcessor {
+    @Override
+    public void processMessage(String message) {
+        System.out.println("Processing email message: " + message);
+    }
+}
+
+class SMSProcessor implements MessageProcessor {
+    @Override
+    public void processMessage(String message) {
+        System.out.println("Processing SMS message: " + message);
+    }
+}
+Sorting Employees:
+java
+Copy code
+interface Employee {
+    String getName();
+    double getSalary();
+}
+
+class Manager implements Employee {
+    private String name;
+    private double salary;
+
+    // Constructor and other methods
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getSalary() {
+        return salary;
+    }
+}
+
+class Engineer implements Employee {
+    private String name;
+    private double salary;
+
+    // Constructor and other methods
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public double getSalary() {
+        return salary;
+    }
+}
+Simple Calculator:
+java
+Copy code
+interface Calculator {
+    int add(int a, int b);
+    int subtract(int a, int b);
+    int multiply(int a, int b);
+    int divide(int a, int b);
+}
+
+class BasicCalculator implements Calculator {
+    @Override
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    @Override
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    @Override
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    @Override
+    public int divide(int a, int b) {
+        if (b != 0) {
+            return a / b;
+        }
+        return -1; // Indicates division by zero
+    }
+}
+Geometric Shapes Hierarchy:
+java
+Copy code
+interface GeometricShape {
+    double calculateArea();
+    double calculatePerimeter();
+}
+
+class Square implements GeometricShape {
+    private double side;
+
+    // Constructor and other methods
+
+    @Override
+    public double calculateArea() {
+        return side * side;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 4 * side;
+    }
+}
+
+class Circle implements GeometricShape {
+    private double radius;
+
+    // Constructor and other methods
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+class Triangle implements GeometricShape {
+    private double base;
+    private double height;
+    private double side1;
+    private double side2;
+    private double side3;
+
+    // Constructor and other methods
+
+    @Override
+    public double calculateArea() {
+        return 0.5 * base * height;
+    }
+
+    @Override
+    public double calculatePerimeter() {
+        return side1 + side2 + side3;
+    }
+}
+Remote Control:
+java
+Copy code
+interface RemoteControl {
+    void turnOn();
+    void turnOff();
+}
+
+class TV implements RemoteControl {
+    @Override
+    public void turnOn() {
+        System.out.println("TV turned on");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("TV turned off");
+    }
+}
+
+class Stereo implements RemoteControl {
+    @Override
+    public void turnOn() {
+        System.out.println("Stereo turned on");
+    }
+
+    @Override
+    public void turnOff() {
+        System.out.println("Stereo turned off");
+    }
+}
+Plugin System:
+java
+Copy code
+interface Plugin {
+    void initialize();
+    void execute();
+    void close();
+}
+
+class SamplePlugin implements Plugin {
+    @Override
+    public void initialize() {
+        System.out.println("Sample plugin initialized");
+    }
+
+    @Override
+    public void execute() {
+        System.out.println("Sample plugin executed");
+    }
+
+    @Override
+    public void close() {
+        System.out.println("Sample plugin closed");
+    }
+}
