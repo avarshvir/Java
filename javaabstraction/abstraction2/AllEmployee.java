@@ -11,6 +11,10 @@ class AllEmployee{
         System.out.println("Id of Developer is : "+ developer.getId());
         
         System.out.println("Salary of SalesPerson is : "+ sp.calculateSalary());
-        
+
+        Employee e = new Manager("joven",4004,2000,40);
+        System.out.println("Salary of Employee is : "+ e.calculateSalary());
+        System.out.println("Name of Employee is : "+ e.getName());
+         
     }
 }
