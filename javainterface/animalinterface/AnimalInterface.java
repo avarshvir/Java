@@ -5,5 +5,8 @@ class AnimalInterface{
         d.makeSound();
         Cat c = new Cat();
         c.makeSound();
+        Animal a = new Dog();
+        a.makeSound();
+       // Dog a2 = new Animal();
     }
 }

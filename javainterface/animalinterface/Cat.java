@@ -1,6 +1,6 @@
 package animalinterface;
 class Cat implements Animal{
-    void makeSound(){
+   public void makeSound(){
         System.out.println("meow meow");
     }
 }
