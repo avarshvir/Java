@@ -7,6 +7,6 @@ class AnimalInterface{
         c.makeSound();
         Animal a = new Dog();
         a.makeSound();
-       // Dog a2 = new Animal();
+        //Dog a2 = new Animal();
     }
 }

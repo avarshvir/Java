@@ -1,4 +1,4 @@
-package package3_1;
+package package3.package3_1;
 import package3.*;
 public class Lion{
     void show(){

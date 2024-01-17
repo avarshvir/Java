@@ -16,5 +16,9 @@ class D extends C{
         C c = new C();
         c.printA();
         c.printB();
+
+        D d2 = new D();
+        d2.printA();
+        d2.printB();
     }
 }
